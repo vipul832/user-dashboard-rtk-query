@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { UserObject } from "../../constant/userData";
+import { UserObject } from "../../constant/userDataContant";
 import { RootState } from "../../app/store";
 
 const initialState: UserObject[] = [
