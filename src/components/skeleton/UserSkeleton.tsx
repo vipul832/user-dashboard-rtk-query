@@ -1,5 +1,4 @@
 const dummayData = Array.from({ length: 10 });
-let Id = 0;
 const UserSkeleton = () => {
   return (
     <>
@@ -22,8 +21,8 @@ const UserSkeleton = () => {
             </tr>
           </thead>
           <tbody>
-            {dummayData.map(() => (
-              <tr key={Id++}>
+            {dummayData.map((_, index) => (
+              <tr key={index}>
                 <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                   <div className="flex items-center cursor-pointer">
                     <div className="h-10 w-10 flex-shrink-0 animate-pulse rounded-full bg-gray-400"></div>
