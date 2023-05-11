@@ -1,5 +1,5 @@
 // store for redux
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "../features/users/userSlice";
 import themeReducer from "../features/theme/themSlice";
 import UserCardReducer from "../features/users/UserCardSlice";
