@@ -15,9 +15,7 @@ const UserSkeleton = () => {
               <th>
                 <div className="w-[5rem] h-[1.2rem] rounded-3xl bg-gray-400 animate-pulse px-5"></div>
               </th>
-              <th>
-                <div className="w-[5rem] h-[1.2rem] rounded-3xl bg-gray-400 animate-pulse px-5"></div>
-              </th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
