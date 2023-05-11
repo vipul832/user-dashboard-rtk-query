@@ -2,7 +2,7 @@
 In this practical, we have tried to implement a scenario that you probably find in a real project where you have to display all the users, and on hover, you have to profile card and other details of the user. This practical are in two in This one we are taking data from local user Json which is hard coded but in second Practical we will do using RTK Query add get data from api.
  
  # Demo Link
- [Live Demo Link]()
+ [Live Demo Link](https://master--cheerful-sunflower-4f04ed.netlify.app/)
 
 ## Technology Use
 - Typescript

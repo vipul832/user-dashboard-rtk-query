@@ -20,7 +20,7 @@ import ReactPaginate from "react-paginate";
 
 function App() {
   const [page, setPage] = useState(0);
-  const { data, isLoading, isFetching } = useGetUserDataQuery(page);
+  const { data, isLoading } = useGetUserDataQuery(page);
   const theme = useSelector(themeValue);
   const dispatch = useDispatch();
   let TotalPages = data?.totalPages ?? 0;
