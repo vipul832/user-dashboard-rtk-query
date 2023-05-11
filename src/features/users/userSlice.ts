@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { users, USERS } from "../../constant/userData";
+import { USERS } from "../../constant/userDataContant";
 import { RootState } from "../../app/store";
 
 const initialState: USERS = {
-  userData: users,
+  message: "",
+  users: [],
+  totalPages: 0,
+  currentPage: 1,
 };
 
 const userSlice = createSlice({
@@ -12,6 +15,6 @@ const userSlice = createSlice({
   reducers: {},
 });
 
-export const selectAllUsers = (state: RootState) => state.users.userData;
+export const selectAllUsers = (state: RootState) => state.users.users;
 
 export default userSlice.reducer;
