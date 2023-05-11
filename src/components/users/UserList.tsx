@@ -1,19 +1,22 @@
-import { useSelector, useDispatch } from "react-redux";
-import { selectAllUsers } from "../../features/users/userSlice";
+import { useDispatch } from "react-redux";
 
 // Icon from React-icons Import
 import { AiOutlineLock } from "react-icons/ai";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
 import { mouseEnter, mouseLeave } from "../../features/users/UserCardSlice";
+import { UserObject } from "../../constant/userDataContant";
 
-const UserList = () => {
-  const users = useSelector(selectAllUsers);
+type userProp = {
+  users: UserObject[] | undefined;
+};
+
+const UserList = ({ users }: userProp) => {
   const dispatch = useDispatch();
   return (
     <div className="overflow-x-scroll lg:overflow-auto">
       <table className="text-center items-center w-4/12">
-        <thead className="">
+        <thead>
           <tr className="text-[1.3rem] text-left">
             <th>Name</th>
             <th>Status</th>
@@ -22,7 +25,7 @@ const UserList = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user, index) => {
+          {users?.map((user, index) => {
             return (
               <tr key={index}>
                 <td className="py-3 whitespace-nowrap cursor-pointer pr-10">
@@ -87,7 +90,11 @@ const UserList = () => {
                   )}
                 </td>
                 <td className="text-[25px] ps-3 pr-10">
-                  {user.removable ? <RiDeleteBin5Line /> : <AiOutlineLock />}
+                  {user.removable === "true" ? (
+                    <RiDeleteBin5Line />
+                  ) : (
+                    <AiOutlineLock />
+                  )}
                 </td>
               </tr>
             );
