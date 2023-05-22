@@ -54,7 +54,7 @@ function App() {
             previousLabel={"Previous"}
             nextLabel={"Next"}
             breakLabel={"..."}
-            pageCount={TotalPages} // total number of page
+            pageCount={TotalPages}
             className="flex gap-3 items-center justify-center"
             pageRangeDisplayed={3}
             marginPagesDisplayed={2}
@@ -64,13 +64,14 @@ function App() {
             }`}
             pageClassName={`border ${
               theme ? "border-white" : "border-indigo-500"
-            } w-10 h-10 rounded-[5px] justify-center items-center flex`}
+            } w-10 h-10 rounded-[5px] justify-center items-center flex `}
             previousClassName={`border w-30 ${
               theme ? " border-black" : "border-indigo-500"
             } p-2 rounded-[5px] lg:mr-40`}
             nextClassName={`border w-30 ${
               theme ? "border-black" : "border-indigo-500"
             } p-2 rounded-[5px] lg:ms-40`}
+            pageLinkClassName="w-full h-full flex justify-center items-center"
           />
         </div>
       </div>
